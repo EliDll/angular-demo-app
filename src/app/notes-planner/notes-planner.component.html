@@ -1,0 +1,36 @@
+<br/><br/>
+
+<mat-form-field appearance="fill">
+  <mat-label>Title</mat-label>
+  <input matInput [(ngModel)]="tempTitle">
+</mat-form-field>
+<br/>
+<mat-form-field  appearance="fill">
+  <mat-label>Description</mat-label>
+  <input matInput [(ngModel)]="tempDescription">
+</mat-form-field>
+
+<br/>
+<br/>
+
+<button mat-raised-button color="primary" (click)="addNote()">Add Note</button>
+
+<br/>
+<br/>
+
+<button mat-raised-button color="primary" (click)="toggleNotes()">Hide/Show Notes</button>
+
+<br/>
+<br/>
+
+<div *ngIf="showNotes">
+  <mat-card *ngFor="let x of notes; let i = index">
+    <mat-card-title>
+      {{x.title}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{x.description}}
+    </mat-card-subtitle>
+
+  </mat-card>
+</div>

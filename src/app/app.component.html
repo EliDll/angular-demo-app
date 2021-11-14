@@ -1,0 +1,15 @@
+<app-notes-planner></app-notes-planner>
+<br/><br/>
+<mat-slider thumbLabel  min="0" max="10" step="1" [(ngModel)]="x"></mat-slider>
+<mat-slider thumbLabel  min="0" max="10" step="1" [(ngModel)]="y"></mat-slider>
+
+<mat-slider thumbLabel [min]="min" [max]="max" step="1" [value]="x" (change)="print()"></mat-slider>
+
+<mat-form-field>
+  <mat-label>x</mat-label>
+  <input matInput [(ngModel)]="x">
+</mat-form-field>
+
+
+
+
